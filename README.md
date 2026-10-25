@@ -51,7 +51,8 @@ GitHub Actions (`.github/workflows/build.yaml`) builds and pushes to
 - `latest` — moving tag, not recommended for production.
 
 A build runs on every change to the `Dockerfile` or the workflow, on manual dispatch, and
-weekly (Monday 03:00 UTC) to pick up Alpine and Tor security updates.
+monthly (1st day, 03:00 UTC) to pick up Alpine and Tor security updates. After each build
+only the 3 most recent package versions are kept; older ones are deleted from GHCR.
 
 ## License
 
